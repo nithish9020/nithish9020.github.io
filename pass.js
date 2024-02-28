@@ -1,10 +1,10 @@
 //random Pasword Generator
 function generatePassword(){
     const length = document.getElementById("nof").value;
-    const includeLowercase = true;
-    const includeUppercase = true;
-    const includeNumbers = true;
-    const includeSymbols = true;
+    const includeLowercase = document.getElementById("lower").checked;
+    const includeUppercase = document.getElementById("upper").checked;
+    const includeNumbers = document.getElementById("numm").checked;
+    const includeSymbols = document.getElementById("sym").checked;
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const symbolChars = "!@#$%^&*()_+-=";
@@ -30,9 +30,5 @@ function generatePassword(){
 }
 
 
-const pass = generatePassword(passwordLength,
-                                includeLowercase,
-                                includeUppercase,
-                                includeNumbers,
-                                includeSymbols);
+const pass = generatePassword();
 console.log('Generated password : '+ pass)
