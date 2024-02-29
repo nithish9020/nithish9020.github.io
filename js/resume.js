@@ -15,7 +15,7 @@ function generatePassword(){
     allowedChars += includeUppercase? uppercaseChars : "";
     allowedChars += includeNumbers? numberChars : "";
     allowedChars += includeSymbols? symbolChars : "";
-    if(allowedchars == ""){
+    if(allowedChars == ""){
       document.getElementById("pass").innerText = 'Please Select atleast only one type of character';
     }
     if(length <= 0){
