@@ -18,9 +18,10 @@ function generatePassword(){
     if(allowedChars == ""){
       document.getElementById("pass").innerText = 'Please Select atleast only one type of character';
     }
-    if(length <= 0){
+    else if(length <= 0){
         document.getElementById("pass").innerText = 'Password length must be at least 1';
     }
+    else{
     for(let i=0 ; i < length; i++){
         const randomIndex = Math.floor(Math.random() * allowedChars.length);
         password+=allowedChars[randomIndex]
@@ -28,7 +29,7 @@ function generatePassword(){
 
     //console.log(allowedChars);
     document.getElementById("pass").innerText=password;
-    return password;
+    }
 }
 (function($) {
   "use strict"; // Start of use strict
