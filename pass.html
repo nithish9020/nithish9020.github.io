@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-light" style="margin-top: 20px">
+    <div class="container">
+      <div class="row row-cols-1 gy-3">
+        <div class="col">
+          <h3 class="fst-italic" id="head">Password Generator</h3>
+        </div>
+        <div class="col">
+          <label for="nof" class="form-label fs-2"
+            >Enter Number of Characters :</label
+          >
+          <div class="input-group">
+            <span class="input-group-text">#</span>
+            <input
+              id="nof"
+              type="number"
+              class="form-control form-control-sm"
+            />
+            <button
+              id="gen"
+              class="btn btn-primary"
+              onclick="generatePassword()"
+            >
+              Generate
+            </button>
+          </div>
+        </div>
+        <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="numm">
+              <label class="form-check-label" for="numm">Include Numbers</label>
+            </div><br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="upper">
+              <label class="form-check-label" for="upper">Include UpperCase</label>
+            </div><br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="lower">
+              <label class="form-check-label" for="lower">Include LowerCase</label>
+            </div><br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="sym">
+              <label class="form-check-label" for="sym">Include Symbols</label>
+            </div>
+        </div>
+        <div class="col">
+          <br /><br /><br /><br />
+          <h4 id="pass"></h4>
+        </div>
+      </div>
+    </div>
+    <script src="js/resume.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
